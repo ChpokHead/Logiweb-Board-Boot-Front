@@ -1,0 +1,23 @@
+<table class="table table-dark table-striped table-hover">
+  <thead class="thead-dark">
+  <tr>
+    <th scope="col">Регистрационный номер</th>
+    <th scope="col">Вместимость</th>
+    <th scope="col">Размер смены водителей</th>
+    <th scope="col">Статус</th>
+    <th scope="col">Номер текущего заказа</th>
+    <th scope="col">Местоположение</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let truck of trucks">
+    <td>{{truck.regNumber}}</td>
+    <td>{{truck.capacity}}</td>
+    <td>{{truck.driversShift}}</td>
+    <td *ngIf="truck.status == 0">Исправен</td>
+    <td *ngIf="truck.status == 1">Неисправен</td>
+    <td>{{truck.currentOrderId}}</td>
+    <td>{{truck.location}}</td>
+  </tr>
+  </tbody>
+</table>

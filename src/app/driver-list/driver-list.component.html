@@ -1,0 +1,22 @@
+<table class="table table-dark table-striped table-hover">
+  <thead class="thead-dark">
+  <tr>
+    <th scope="col">Личный номер</th>
+    <th scope="col">Имя</th>
+    <th scope="col">Фамилия</th>
+    <th scope="col">Отработано часов в месяце</th>
+    <th scope="col">Номер текущего заказа</th>
+    <th scope="col">Номер текущей фуры</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let driver of drivers">
+      <td>{{driver.personalNumber}}</td>
+      <td>{{driver.firstName}}</td>
+      <td>{{driver.lastName}}</td>
+      <td>{{driver.monthWorkedHours}}</td>
+      <td>{{driver.currentOrderId}}</td>
+      <td>{{driver.currentTruckRegNumber}}</td>
+    </tr>
+  </tbody>
+</table>
